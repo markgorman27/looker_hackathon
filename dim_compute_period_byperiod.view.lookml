@@ -2,10 +2,8 @@
   sql_table_name: looker_data.dim_compute_period_byperiod
   fields:
 
-  - dimension_group: calendardate
-    type: time
-    timeframes: [date, week, month]
-    convert_tz: false
+  - dimension: calendardate
+    type: date
     sql: ${TABLE}.calendardate
 
   - dimension: calendardate_name
