@@ -50,7 +50,7 @@
     sql: ${TABLE}.car_count
     drill_fields: []
     
-  - measure: carcount4W
+  - measure: carcount4W_raw
     type: sum
     filters:
       is_4W: True
@@ -64,11 +64,20 @@
     sql: ${TABLE}.car_count
     drill_fields: []
     
-  - measure: carcount4WPY
+  - measure: carcount4WPY_raw
     type: sum
     filters:
       is_4WPY: True
     sql: ${TABLE}.car_count
     drill_fields: []
 
+  - measure: carcount4W
+    type: number
+    sql: case when ${4Wweeks_count} != 0 then ${carcount4W_raw}/${4Wweeks_count} end
+    drill_fields: []
+    
+  - measure: carcount4WPY
+    type: number
+    sql: case when ${4WPYweeks_count} != 0 then ${carcount4WPY_raw}/${4WPYweeks_count} end
+    drill_fields: []
 
