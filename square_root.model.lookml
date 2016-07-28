@@ -15,4 +15,8 @@
       sql_on: ${fact_metrics.calendardate} = ${dim_compute_period_byweek.calendardate}
       relationship: many_to_one
       type: inner
+    - join: dim_compute_period_byweek_wprior
+      sql_on: (${fact_metrics.calendardate} = ${dim_compute_period_byweek_wprior.calendardate} or ${fact_metrics.calendardate} = ${dim_compute_period_byweek_wprior.prior_calendardate})
+      relationship: many_to_one
+      type: left_outer
 
