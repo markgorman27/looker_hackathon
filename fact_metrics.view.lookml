@@ -30,6 +30,19 @@
     type: count
     drill_fields: []
     
+  - measure: 4Wweeks_count
+    type: count_distinct
+    filters:
+      is_4W: True
+    sql: dim_compute_period_byweek_wprior.weekno
+    
+  - measure: 4WPYweeks_count
+    type: count_distinct
+    filters:
+      is_4WPY: True
+    sql: dim_compute_period_byweek_wprior.prior_weekno
+    
+    
   - measure: carcount1W
     type: sum
     filters:

@@ -29,7 +29,10 @@
           on (    cur.computeyear::integer = pri.computeyear::integer + 1
               and cur.weekno = pri.weekno
               and cur.computeperiod = pri.computeperiod
-              and cur.rn = pri.rn)
+              and cur.rn = pri.rn )
+     sql_trigger_value: SELECT CURDATE()
+     indexes: [calendardate, prior_calendardate]
+
        
   fields:
      - dimension: computeperiod
