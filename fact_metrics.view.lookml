@@ -221,4 +221,84 @@
     sql: case when ${carcount4WPY_raw} != 0 then ${ticketaverage4WPY_raw}/${carcount4WPY_raw} end
     value_format: '$0'
     drill_fields: []
+    
+  - measure: gpm1W_numerator_raw
+    type: sum
+    filters:
+      is_1W: True
+    sql: ${TABLE}.parts_revenue + ${TABLE}.labor_revenue + ${TABLE}.sublet_revenue - ${TABLE}.parts_cost - ${TABLE}.labor_cost - ${TABLE}.sublet_cost
+    drill_fields: []   
+    
+  - measure: gpm4W_numerator_raw
+    type: sum
+    filters:
+      is_4W: True
+    sql: ${TABLE}.parts_revenue + ${TABLE}.labor_revenue + ${TABLE}.sublet_revenue - ${TABLE}.parts_cost - ${TABLE}.labor_cost - ${TABLE}.sublet_cost
+    drill_fields: [] 
+    
+  - measure: gpm1WPY_numerator_raw
+    type: sum
+    filters:
+      is_1WPY: True
+    sql: ${TABLE}.parts_revenue + ${TABLE}.labor_revenue + ${TABLE}.sublet_revenue - ${TABLE}.parts_cost - ${TABLE}.labor_cost - ${TABLE}.sublet_cost
+    drill_fields: [] 
+    
+  - measure: gpm4WPY_numerator_raw
+    type: sum
+    filters:
+      is_4WPY: True
+    sql: ${TABLE}.parts_revenue + ${TABLE}.labor_revenue + ${TABLE}.sublet_revenue - ${TABLE}.parts_cost - ${TABLE}.labor_cost - ${TABLE}.sublet_cost
+    drill_fields: []    
+    
+  - measure: gpm1W_denominator_raw
+    type: sum
+    filters:
+      is_1W: True
+    sql: ${TABLE}.parts_revenue + ${TABLE}.labor_revenue + ${TABLE}.sublet_revenue
+    drill_fields: []   
+    
+  - measure: gpm4W_denominator_raw
+    type: sum
+    filters:
+      is_4W: True
+    sql: ${TABLE}.parts_revenue + ${TABLE}.labor_revenue + ${TABLE}.sublet_revenue
+    drill_fields: [] 
+    
+  - measure: gpm1WPY_denominator_raw
+    type: sum
+    filters:
+      is_1WPY: True
+    sql: ${TABLE}.parts_revenue + ${TABLE}.labor_revenue + ${TABLE}.sublet_revenue
+    drill_fields: [] 
+    
+  - measure: gpm4WPY_denominator_raw
+    type: sum
+    filters:
+      is_4WPY: True
+    sql: ${TABLE}.parts_revenue + ${TABLE}.labor_revenue + ${TABLE}.sublet_revenue
+    drill_fields: []      
+    
+  - measure: gpm1W
+    type: number
+    sql: case when ${gpm1W_denominator_raw} != 0 then ${gpm1W_numerator_raw}/${gpm1W_denominator_raw} end
+    value_format: '#0.00%'
+    drill_fields: []
+    
+  - measure: gpm4W
+    type: number
+    sql: case when ${gpm4W_denominator_raw} != 0 then ${gpm4W_numerator_raw}/${gpm4W_denominator_raw} end
+    value_format: '#0.00%'
+    drill_fields: []
+    
+  - measure: gpm1WPY
+    type: number
+    sql: case when ${gpm1WPY_denominator_raw} != 0 then ${gpm1WPY_numerator_raw}/${gpm1WPY_denominator_raw} end
+    value_format: '#0.00%'
+    drill_fields: []
+    
+  - measure: gpm4WPY
+    type: number
+    sql: case when ${gpm4WPY_denominator_raw} != 0 then ${gpm4WPY_numerator_raw}/${gpm4WPY_denominator_raw} end
+    value_format: '#0.00%'
+    drill_fields: []    
 
