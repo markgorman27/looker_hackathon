@@ -1,5 +1,5 @@
 - view: fact_metrics
-  sql_table_name: looker_data.fact_metrics
+  sql_table_name: cbaautoupdate_deliver.fact_metrics2
   fields:
 
   - dimension: calendardate

@@ -1,4 +1,4 @@
-- connection: looker_ro
+- connection: cba-poc-pg1
 
 - include: "*.view.lookml"       # include all the views
 - include: "*.dashboard.lookml"  # include all the dashboards

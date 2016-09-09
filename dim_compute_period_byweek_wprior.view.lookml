@@ -23,12 +23,12 @@
                         row_number() over (partition by cur.computeperiod order by cur.calendardate desc) as topcount
                  from (select *,
                               row_number() over (partition by computeperiod, computeyear, weekno) as rn
-                         from looker_data.dim_compute_period_byweek
+                         from cbaautoupdate_deliver.dim_compute_period_byweek2
                         where computeperiod in ('1W', '4W')
                           and calendardate <= current_date) as cur
                  left join (select *,
                                    row_number() over (partition by computeperiod, computeyear, weekno) as rn
-                              from looker_data.dim_compute_period_byweek
+                              from cbaautoupdate_deliver.dim_compute_period_byweek2
                              where computeperiod in ('1W', '4W')
                                and calendardate <= current_date) as pri
                     on (    cur.computeyear::integer = pri.computeyear::integer + 1

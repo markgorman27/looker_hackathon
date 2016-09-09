@@ -8,7 +8,7 @@
     fact_metrics.carcount4WPY]
   filters:
     dim_entity.coach_display_name: ''
-    dim_entity.entity_display_name: Greece
+    dim_entity.entity_display_name: ''
     dim_entity.national_display_name: ''
   sorts: [dim_compute_period_byweek_wprior.toperiod desc]
   limit: 1

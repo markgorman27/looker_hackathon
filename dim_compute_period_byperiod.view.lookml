@@ -1,5 +1,5 @@
 - view: dim_compute_period_byperiod
-  sql_table_name: looker_data.dim_compute_period_byperiod
+  sql_table_name: cbaautoupdate_deliver.dim_compute_period_byperiod2
   fields:
 
   - dimension: calendardate

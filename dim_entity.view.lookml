@@ -1,5 +1,5 @@
 - view: dim_entity
-  sql_table_name: looker_data.dim_entity
+  sql_table_name: cbaautoupdate_deliver.dim_entity2
   fields:
 
   - dimension: bays
