@@ -16,6 +16,9 @@
     - label: Breakdown by Coach
       url: /dashboards/4?coach_display_name={{ value }}
       icon_url: http://orig15.deviantart.net/1ad4/f/2009/299/6/3/awesome_face_by_megaman1218.png
+    - label: Find me on LinkedIn!
+      url: https://www.linkedin.com/vsearch/f?type=all&keywords={{ value }}
+      icon_url: https://cdn3.iconfinder.com/data/icons/free-social-icons/67/linkedin_circle_color-512.png
     sql: ${TABLE}.coach_display_name
     drill_fields: entity_display_name
 
