@@ -13,7 +13,7 @@
   - dimension: coach_display_name
     type: string
     sql: ${TABLE}.coach_display_name
-    drill_fields: detail*
+    drill_fields: entity_display_name
 
   - dimension: coach_name
     type: string
