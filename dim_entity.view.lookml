@@ -25,6 +25,7 @@
   - dimension: coach_name
     type: string
     sql: ${TABLE}.coach_name
+    drill_fields: entity_display_name
 
   - dimension: entity
     type: string

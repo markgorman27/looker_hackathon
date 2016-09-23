@@ -95,6 +95,7 @@
     drill_fields: []
 
   - measure: carcount1W
+    label: 'Car Count (1W)'
     type: number
     sql: case when ${entity_count1W} != 0 then ${carcount1W_raw}/${entity_count1W} end
     value_format: '0'
@@ -107,6 +108,7 @@
     drill_fields: []
     
   - measure: carcount1WPY
+    label: 'Car Count (1W), Prev. Yr.'
     type: number
     sql: case when ${entity_count1WPY} != 0 then ${carcount1WPY_raw}/${entity_count1WPY} end
     value_format: '0'
