@@ -13,7 +13,7 @@
   - dimension: coach_display_name
     type: string
     links: # This cannot be the last field? Weird...
-    - label: Breakdown by Coach
+    - label: Analytic View
       url: /dashboards/4?coach_display_name={{ value }}
       icon_url: http://orig15.deviantart.net/1ad4/f/2009/299/6/3/awesome_face_by_megaman1218.png
     - label: Find me on LinkedIn!
