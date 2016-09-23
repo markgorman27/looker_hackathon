@@ -100,7 +100,7 @@
     sql: case when ${entity_count1W} != 0 then ${carcount1W_raw}/${entity_count1W} end
     value_format: '0'
     links:
-      - url: /dashboards/6?Date={{ dim_compute_period_byweek_wprior.toperiod._value }}&Coach={{ dim_entity.coach_name._value }}&Store={{ dim_entity.entity_display_name._value }}
+      - url: /dashboards/6?Date={{ dim_compute_period_byweek_wprior.toperiod._value }}&Coach="{{ dim_entity.coach_name._value }}"&Store={{ dim_entity.entity_display_name._value }}
         label: Detials
         icon_url: http://files.softicons.com/download/medical-icons/medical-and-health-care-icons-by-artistsvalley/ico/Hot/Radiation.ico
     drill_fields: []
