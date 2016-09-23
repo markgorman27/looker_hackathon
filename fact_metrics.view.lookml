@@ -70,6 +70,9 @@
     type: sum
     filters:
       is_1W: True
+    links:
+    - label: Analytic View
+      url: /dashboards/4?coach_display_name={{ value }}
     sql: ${TABLE}.car_count
     drill_fields: []
     
